@@ -2,7 +2,7 @@
 #Overview
 This project is a simple shell (command-line interpreter) written in C that mimics the basic functionality of a UNIX shell. It supports standard operations like command execution, input/output redirection, piping, and background processes. The shell is designed to handle multiple commands and includes error detection for invalid command sequences.
 
-#Features
+# Features
 
   - Single Command Execution: The shell can execute a single command with optional arguments.
       Example: ls -l
@@ -23,26 +23,26 @@ This project is a simple shell (command-line interpreter) written in C that mimi
       file.txt > more → "Error: invalid output redirection."
       ls | more < file.txt → "Error: input redirection with pipe is invalid for commands after the first one."
 
-#System Calls Used
-    - fork(): To create new processes.
-    - wait(), waitpid(): To wait for processes to finish.
-    - execvp(): To execute commands.
-    - pipe(): To create pipes for inter-process communication.
-    - dup2(): To redirect input/output file descriptors.
-    - open(), close(): To open and close files for redirection.
+# System Calls Used
+  - fork(): To create new processes.
+  - wait(), waitpid(): To wait for processes to finish.
+  - execvp(): To execute commands.
+  - pipe(): To create pipes for inter-process communication.
+  - dup2(): To redirect input/output file descriptors.
+  - open(), close(): To open and close files for redirection.
 
-#How to Compile
+# How to Compile
 Navigate to the project directory.
 Use g++ to compile the shell. Make sure you run the code using a linux interpreter. i used Ubuntu V20.04
 
 g++ simpleShell.cpp -o myshell -pthread
 
-#How to Use
+# How to Use
 Once the shell is compiled, run the executable:
 ./myshell
 You will see the shell prompt (OC_shell>>), where you can type commands.
 
-#Examples:
+Examples:
     - Run a single command:
         OC_shell>> ls -l
     - Use pipes to connect commands:
@@ -57,12 +57,12 @@ You will see the shell prompt (OC_shell>>), where you can type commands.
             - Invalid Output Redirection: If the output redirection (>) is incorrectly used, such as file.txt > more, the shell prints:
             - Invalid Input Redirection with Pipe: If input redirection (<) is used after a pipe, such as in ls | more < file.txt, the shell prints:
 
-#Known Limitations
+# Known Limitations
 The shell does not support advanced features like job control or complex command line parsing (e.g., multi-character separators).
 Input and output redirection should not be used in combination with pipes unless the redirection is on the first or last command in the pipeline.
 
 
-#Test Cases
+# Test Cases
 Basic Commands:
     - date
     - ls -l
@@ -79,11 +79,11 @@ Error Detection:
     - ls | more < file.txt
     - ls |
 
-#Future Improvements
-    - Add support for advanced command line parsing, such as handling multi-character operators and quoted strings.
-    - Implement job control for background tasks (e.g., fg, bg commands).
-    - Expand error detection to cover more complex cases.
+# Future Improvements
+  - Add support for advanced command line parsing, such as handling multi-character operators and quoted strings.
+  - Implement job control for background tasks (e.g., fg, bg commands).
+  - Expand error detection to cover more complex cases.
 
-#References
+# References
 University of Calgary, CPSC 457 - Operating Systems Assignment​(Assign1).
 Linux manual pages: man fork, man execvp, man pipe, man dup2.
