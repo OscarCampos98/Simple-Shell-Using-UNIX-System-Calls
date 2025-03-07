@@ -1,5 +1,5 @@
 # Simple-Shell-Using-UNIX-System-Calls
-#Overview
+# Overview
 This project is a simple shell (command-line interpreter) written in C++ that mimics the basic functionality of a UNIX shell. It supports standard operations like command execution, input/output redirection, piping, and background processes. The shell is designed to handle multiple commands and includes error detection for invalid command sequences.
 
 # Features
