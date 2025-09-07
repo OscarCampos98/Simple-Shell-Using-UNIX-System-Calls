@@ -62,22 +62,22 @@ The shell does not support advanced features like job control or complex command
 Input and output redirection should not be used in combination with pipes unless the redirection is on the first or last command in the pipeline.
 
 
-# Test Cases
-Basic Commands:
-    - date
-    - ls -l
-Piping:
-    - ls | grep A1 | wc -l
-Redirection:
-    - ls -l > file.lst
-    - wc -l < file.txt
-Background Commands:
-    - sleep 10 &
+## Test Cases
+#Basic Commands:
+ - date
+ - ls -l
+#Piping:
+- ls | grep A1 | wc -l
+#Redirection:
+- ls -l > file.lst
+- wc -l < file.txt
+#Background Commands:
+- sleep 10 &
 
-Error Detection:
-    - file.txt > more
-    - ls | more < file.txt
-    - ls |
+#Error Detection:
+- file.txt > more
+- ls | more < file.txt
+- ls |
 
 # Future Improvements
   - Add support for advanced command line parsing, such as handling multi-character operators and quoted strings.
